@@ -1,0 +1,68 @@
+<main class="h-screen flex">
+  <aside class="relative w-1/2 hidden h-screen lg:block text-white border-r-2 border-blue-500">
+    <div>
+      <app-smokey-background />
+      <div class="absolute h-full flex flex-col justify-around w-full p-10 bg-black/50">
+        <div class="brand text-white flex">
+          <span class="text-3xl font-semibold">
+            LVL<span class="text-blue-500 font-bold">UP</span>
+          </span>
+          <svg lucideChevronsUp class="w-10 h-10 relative bottom-1 text-blue-500"></svg>
+        </div>
+
+        <div class="description my-5">
+          <h1 class="text-5xl font-bold w-[70%] leading-tight">
+            Empower your learning journey with our smart exam platform.
+          </h1>
+        </div>
+
+        <div class="selling-points">
+          <ul class="space-y-8">
+            <li class="flex gap-5">
+              <span
+                class="mt-1 grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-blue-300/50 text-blue-200"
+              >
+                <svg lucideBrain class="w-6 h-6"></svg>
+              </span>
+              <div class="space-y-1.5">
+                <h2 class="font-mono text-lg font-bold text-blue-200">Tailored Diplomas</h2>
+                <p class="max-w-md font-mono text-sm leading-relaxed text-gray-300">
+                  Choose from specialized tracks like Frontend, Backend, and Mobile Development.
+                </p>
+              </div>
+            </li>
+            <li class="flex gap-5">
+              <span
+                class="mt-1 grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-blue-300/50 text-blue-200"
+              >
+                <svg lucideBookCheck class="w-6 h-6"></svg>
+              </span>
+              <div class="space-y-1.5">
+                <h2 class="font-mono text-lg font-bold text-blue-200">Exams</h2>
+                <p class="max-w-md font-mono text-sm leading-relaxed text-gray-300">
+                  Access topic-specific tests including HTML, CSS, JavaScript, and more.
+                </p>
+              </div>
+            </li>
+            <li class="flex gap-5">
+              <span
+                class="mt-1 grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-blue-300/50 text-blue-200"
+              >
+                <svg lucideMessageSquareMore class="w-6 h-6"></svg>
+              </span>
+              <div class="space-y-1.5">
+                <h2 class="font-mono text-lg font-bold text-blue-200">Smart Multi-Step Forms</h2>
+                <p class="max-w-md font-mono text-sm leading-relaxed text-gray-300">
+                  Answer in short guided steps that save your progress as you go.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="page-wrapper w-1/2 p-5">
+    <router-outlet></router-outlet>
+  </div>
+</main>
