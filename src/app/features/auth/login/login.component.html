@@ -1,0 +1,32 @@
+<div class="max-w-lg mx-auto">
+  <h2 class="text-3xl font-bold text-zinc-800">Welcome Back</h2>
+  <span class="text-zinc-600">Sign in to continue</span>
+
+  <form class="mt-8 flex flex-col gap-10">
+    <p-floatlabel class="text-sm">
+      <input
+        pInputText
+        id="over_label"
+        autocomplete="off"
+        class="w-full border-t-0 border-l-0 border-r-0 rounded-none shadow-none px-0 mx-0 border-b-2"
+      />
+      <label for="over_label" class="flex gap-2 items-center"
+        ><svg lucideUser class="w-5 h-5"></svg> Email Address</label
+      >
+    </p-floatlabel>
+
+    <p-floatlabel>
+      <p-password
+        class="w-full"
+        inputStyleClass="w-full border-t-0 border-l-0 border-r-0 rounded-none shadow-none px-0 mx-0 border-b-2"
+        inputId="over_label"
+        autocomplete="off"
+        [toggleMask]="true"
+        [feedback]="false"
+      />
+      <label for="over_label" class="flex gap-2 items-center"
+        ><svg lucideLock class="w-5 h-5"></svg> Password</label
+      >
+    </p-floatlabel>
+  </form>
+</div>
