@@ -3,6 +3,7 @@ import { provideRouter } from '@angular/router';
 import { defaultPreset } from '@/core/themes/defaultPreset';
 import { routes } from './app.routes';
 import { providePrimeNG } from 'primeng/config';
+import { provideLucideConfig } from '@lucide/angular';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,5 +21,6 @@ export const appConfig: ApplicationConfig = {
         },
       },
     }),
+    provideLucideConfig({ size: '1.25em', strokeWidth: 1.75 }),
   ],
 };

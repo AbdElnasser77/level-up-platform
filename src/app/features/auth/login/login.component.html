@@ -1,1 +1,45 @@
-<p>login works!</p>
+<div class="max-w-md mx-auto">
+  <div class="header mb-10">
+    <h2 class="text-4xl mb-2 font-bold text-zinc-800">Welcome Back</h2>
+    <span class="text-zinc-600">Sign in to continue</span>
+  </div>
+
+  <form class="mt-8 flex flex-col gap-10">
+    <p-floatlabel>
+      <input
+        pInputText
+        id="email"
+        autocomplete="off"
+        class="w-full border-t-0 border-l-0 border-r-0 rounded-none shadow-none border-b-2"
+      />
+      <label for="email" class="duration-200 flex gap-[0.4em] items-center pb-2.5">
+        <svg lucideUser></svg> Email Address
+      </label>
+    </p-floatlabel>
+
+    <p-floatlabel class="">
+      <p-password
+        class="w-full"
+        inputStyleClass="w-full border-t-0 border-l-0 border-r-0 rounded-none shadow-none border-b-2"
+        inputId="password"
+        autocomplete="off"
+        [toggleMask]="true"
+        [feedback]="false"
+      />
+      <label for="password" class="duration-200 flex gap-[0.4em] items-center pb-2.5">
+        <svg lucideLock></svg> Password
+      </label>
+    </p-floatlabel>
+
+    <a
+      routerLink="/auth/forgot-password"
+      class="text-zinc-600 text-sm self-start hover:text-blue-700 transition text-[14px]"
+      >Forgot Password ?</a
+    >
+
+    <button pButton class="py-2.5 group relative" styleClass="w-full">
+      <span pButtonLabel>Sign In</span>
+      <svg lucideChevronRight></svg>
+    </button>
+  </form>
+</div>
