@@ -4,6 +4,10 @@ import Aura from '@primeuix/themes/aura';
 
 export const defaultPreset = definePreset(Aura, {
   semantic: {
+    formField: {
+      paddingX: '0',
+    },
+
     primary: {
       50: '{blue.50}',
       100: '{blue.100}',
@@ -33,6 +37,13 @@ export const defaultPreset = definePreset(Aura, {
           hoverColor: '{indigo.700}',
           activeColor: '{indigo.800}',
         },
+      },
+    },
+  },
+  components: {
+    floatlabel: {
+      root: {
+        positionX: '0',
       },
     },
   },

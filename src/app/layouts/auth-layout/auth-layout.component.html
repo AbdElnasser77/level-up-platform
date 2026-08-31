@@ -1,4 +1,4 @@
-<main class="h-screen flex">
+<main class="h-screen flex justify-center">
   <aside
     class="relative w-1/2 hidden h-screen lg:block text-white shadow-[10px_0_20px_rgba(0,0,0,0.15)] border-blue-500"
   >
@@ -41,7 +41,9 @@
       </div>
     </div>
   </aside>
-  <div class="page-wrapper w-1/2 p-5 text-center flex flex-col item-center justify-center">
+  <div
+    class="page-wrapper w-full lg:w-1/2 p-5 text-center flex flex-col item-center justify-center"
+  >
     <router-outlet></router-outlet>
   </div>
 </main>
