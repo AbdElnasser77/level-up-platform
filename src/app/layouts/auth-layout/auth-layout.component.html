@@ -1,5 +1,7 @@
 <main class="h-screen flex">
-  <aside class="relative w-1/2 hidden h-screen lg:block text-white border-r-2 border-blue-500">
+  <aside
+    class="relative w-1/2 hidden h-screen lg:block text-white shadow-[10px_0_20px_rgba(0,0,0,0.15)] border-blue-500"
+  >
     <div>
       <app-smokey-background />
       <div class="absolute h-full flex flex-col justify-around w-full p-10 bg-black/50">
@@ -18,45 +20,21 @@
 
         <div class="selling-points">
           <ul class="space-y-8">
-            <li class="flex gap-5">
-              <span
-                class="mt-1 grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-blue-300/50 text-blue-200"
-              >
-                <svg lucideBrain class="w-6 h-6"></svg>
-              </span>
-              <div class="space-y-1.5">
-                <h2 class="font-mono text-lg font-bold text-blue-200">Tailored Diplomas</h2>
-                <p class="max-w-md font-mono text-sm leading-relaxed text-gray-300">
-                  Choose from specialized tracks like Frontend, Backend, and Mobile Development.
-                </p>
-              </div>
-            </li>
-            <li class="flex gap-5">
-              <span
-                class="mt-1 grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-blue-300/50 text-blue-200"
-              >
-                <svg lucideBookCheck class="w-6 h-6"></svg>
-              </span>
-              <div class="space-y-1.5">
-                <h2 class="font-mono text-lg font-bold text-blue-200">Exams</h2>
-                <p class="max-w-md font-mono text-sm leading-relaxed text-gray-300">
-                  Access topic-specific tests including HTML, CSS, JavaScript, and more.
-                </p>
-              </div>
-            </li>
-            <li class="flex gap-5">
-              <span
-                class="mt-1 grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-blue-300/50 text-blue-200"
-              >
-                <svg lucideMessageSquareMore class="w-6 h-6"></svg>
-              </span>
-              <div class="space-y-1.5">
-                <h2 class="font-mono text-lg font-bold text-blue-200">Smart Multi-Step Forms</h2>
-                <p class="max-w-md font-mono text-sm leading-relaxed text-gray-300">
-                  Answer in short guided steps that save your progress as you go.
-                </p>
-              </div>
-            </li>
+            @for (feature of features; track $index) {
+              <li class="flex gap-5">
+                <span
+                  class="mt-1 grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-blue-300/50 text-blue-200"
+                >
+                  <svg [lucideIcon]="feature.img"></svg>
+                </span>
+                <div class="space-y-1.5">
+                  <h2 class="font-mono text-lg font-bold text-blue-200">{{ feature.title }}</h2>
+                  <p class="max-w-md font-mono text-sm leading-relaxed text-gray-300">
+                    {{ feature.description }}
+                  </p>
+                </div>
+              </li>
+            }
           </ul>
         </div>
       </div>

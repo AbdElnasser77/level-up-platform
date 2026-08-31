@@ -6,6 +6,7 @@ import {
   LucideChevronsUp,
   LucideBookCheck,
   LucideMessageSquareMore,
+  LucideDynamicIcon,
 } from '@lucide/angular';
 
 @Component({
@@ -17,8 +18,27 @@ import {
     LucideBrain,
     LucideBookCheck,
     LucideMessageSquareMore,
+    LucideDynamicIcon,
   ],
   templateUrl: './auth-layout.component.html',
   styleUrl: './auth-layout.component.scss',
 })
-export class AuthLayoutComponent {}
+export class AuthLayoutComponent {
+  features = [
+    {
+      img: LucideBrain,
+      title: 'Tailored Diplomas',
+      description: 'Choose from specialized tracks like Frontend, Backend, and Mobile Development.',
+    },
+    {
+      img: LucideBookCheck,
+      title: 'Exams',
+      description: 'Access topic-specific tests including HTML, CSS, JavaScript, and more.',
+    },
+    {
+      img: LucideMessageSquareMore,
+      title: 'Smart Multi-Step Forms',
+      description: 'Answer in short guided steps that save your progress as you go.',
+    },
+  ];
+}
